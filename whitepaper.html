@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The ZOMBO Protocol - Whitepaper</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌀</text></svg>">
+</head>
+
+<body class="bg-slate-950 text-slate-300 font-['Space_Grotesk'] antialiased overflow-x-hidden">
+
+    <!-- Loading Screen (same as index.html, could be componentized in a real framework) -->
+    <div id="loading-screen"
+        class="fixed inset-0 bg-slate-950 flex flex-col justify-center items-center z-[9999] transition-opacity duration-1000">
+        <svg class="w-16 h-16 text-purple-500 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+            </path>
+        </svg>
+        <p id="loading-message" class="text-slate-400 mt-4 text-lg">Calibrating Reality Matrix...</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 bg-slate-950/80 backdrop-blur-md shadow-xl shadow-purple-500/10">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold zombo-text-glow">ZOMBOCOIN</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html#home" class="hover:text-purple-400 transition-colors">Home</a>
+                <a href="whitepaper.html" class="text-purple-400 font-semibold transition-colors">Whitepaper</a>
+            </div>
+            <div class="flex items-center space-x-3">
+                <div class="text-sm">
+                    <span class="text-slate-400">Belief:</span>
+                    <span id="belief-level" class="font-bold text-purple-400">0</span>%
+                </div>
+                <button id="connect-wallet-btn"
+                    class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 glow-purple-sm">
+                    Connect Wallet
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Whitepaper Content -->
+    <main class="container mx-auto py-16 px-6 md:px-0 max-w-4xl">
+        <header class="text-center mb-16">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 zombo-text-glow">The ZOMBO Protocol</h1>
+            <p class="text-2xl text-purple-400">A Paradigm Shift in Decentralized Belief and Quantum-Entangled
+                Potentiality</p>
+            <p class="text-sm text-slate-500 mt-2">Version 0.∞ - Last Updated: Whenever</p>
+        </header>
+
+        <article
+            class="prose prose-invert prose-lg max-w-none prose-headings:text-purple-400 prose-headings:font-semibold prose-a:text-cyan-400 hover:prose-a:text-cyan-300 prose-strong:text-slate-100">
+            <section class="whitepaper-section mb-12 p-6 bg-slate-900/70 rounded-xl border border-slate-800 shadow-lg">
+                <h2 class="text-3xl">Abstract: The Genesis of Anything</h2>
+                <p>ZOMBOCOIN ($ZOMBO) transcends conventional definitions of cryptocurrency, artificial intelligence, or
+                    indeed, reality itself. It is an exploration into the fabric of possibility, a digital manifestation
+                    of the core Zombo tenet: "You can do anything." This document outlines the ZOMBO Protocol, a
+                    revolutionary framework for tokenizing belief, augmenting destiny through AI-driven non-determinism,
+                    and leveraging Layer 2 imagination scaling. We posit that by embracing the inherent absurdity of
+                    existence, we unlock true utility – the utility of unbounded potential.</p>
+            </section>
+
+            <section class="whitepaper-section mb-12 p-6 bg-slate-900/70 rounded-xl border border-slate-800 shadow-lg">
+                <h2 class="text-3xl">1. The ZOMBO Vision: Beyond the Horizon of Comprehension</h2>
+                <p>The digital landscape is saturated with projects promising incremental improvements. ZOMBOCOIN
+                    promises <strong class="text-purple-300">decremental understanding leading to exponential
+                        possibility</strong>. Our vision is not to solve problems, but to dissolve them into the
+                    primordial soup of raw potential from which anything can emerge. We aim to build a decentralized
+                    ecosystem where the only limit is the heat death of the universe, and even that's negotiable with
+                    sufficient belief.</p>
+                <h3 class="text-2xl mt-6">1.1 Core Tenets of Zombology</h3>
+                <ul>
+                    <li><strong>Unwavering Commitment to Ambiguity:</strong> Clarity is the enemy of potential. We
+                        embrace the void.</li>
+                    <li><strong>Radical Transparency (of the Opaque):</strong> All our non-processes are non-documented
+                        for your non-understanding.</li>
+                    <li><strong>Infinite Scalability (of Hype):</strong> ZOMBOCOIN can scale to encompass all
+                        conceivable and inconceivable narratives.</li>
+                    <li><strong>Proof-of-Belief (PoB):</strong> The more you believe, the more real it becomes
+                        (subjectively).</li>
+                    <li><strong>Existential Gas Fees:</strong> Transactions are powered by small moments of existential
+                        contemplation.</li>
+                </ul>
+            </section>
+
+            <section class="whitepaper-section mb-12 p-6 bg-slate-900/70 rounded-xl border border-slate-800 shadow-lg">
+                <h2 class="text-3xl">2. Tokenomics: The $ZOMBO Non-Fungible Idea (NFI)</h2>
+                <p>$ZOMBO is not merely a token; it's a conceptual vessel, a memetic singularity. Its value is derived
+                    from the collective willingness to entertain the impossible.</p>
+                <h3 class="text-2xl mt-6">2.1 Supply and Distribution</h3>
+                <ul>
+                    <li><strong>Total Supply:</strong> Conceptually Infinite / Practically Undefined. Minted through
+                        acts of pure, unadulterated belief.</li>
+                    <li><strong>Initial Distribution (The "Big Vague"):</strong>
+                        <ul>
+                            <li><strong>50% to The Belief Engine Priming Fund:</strong> Reserved for fueling the initial
+                                state of collective conviction.</li>
+                            <li><strong>25% to The Hope Staking Paradox Pool:</strong> Rewards users for staking their
+                                disbelief, thereby paradoxically strengthening the network.</li>
+                            <li><strong>25% to The Gaslight Liquidity Funnel:</strong> Ensures there's always enough
+                                ambiguity to keep things interesting.</li>
+                            <li><strong class="line-through text-slate-500">0.00000001% for Actually Building
+                                    Something:</strong> Budget reallocated to "Philosophical Musing Department".</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="mt-6 p-4 border border-cyan-500/50 rounded-md bg-cyan-900/20">
+                    <p class="font-semibold text-cyan-300">Note on Fungibility:</p>
+                    <p>While $ZOMBO tokens are technically ERC-20 compatible (in spirit), each token carries the unique
+                        existential weight of the belief that manifested it. Thus, they are fungible yet deeply, deeply
+                        personal.</p>
+                </div>
+            </section>
+
+            <section class="whitepaper-section mb-12 p-6 bg-slate-900/70 rounded-xl border border-slate-800 shadow-lg">
+                <h2 class="text-3xl">3. Roadmap: The Path to Anything (and Beyond)</h2>
+                <p>Our roadmap is not a linear progression but a spiraling vortex of ever-expanding potential.</p>
+                <div class="space-y-4 mt-6">
+                    <div class="p-3 border-l-4 border-purple-500 bg-slate-800/50"><strong>Phase 0 (The Primordial
+                            Hum):</strong> Conceptualize Nothingness. Launch the ZOMBO website. Attain baseline
+                        bewilderment. <span class="text-green-400">(Achieved)</span></div>
+                    <div class="p-3 border-l-4 border-purple-500 bg-slate-800/50"><strong>Q1: Emergence of
+                            Destiny:</strong> Launch simulated $ZOMBO token. Implement interactive prompt oracle. Begin
+                        training Belief Engine with paradoxes.</div>
+                    <div class="p-3 border-l-4 border-purple-500 bg-slate-800/50"><strong>Q2: The Great
+                            Augmentation:</strong> Integrate AI-Augmented Destiny features. Launch L2 Imagination
+                        Scaling (Testnet of Daydreams). Achieve first contact with Higher Indifference.</div>
+                    <div class="p-3 border-l-4 border-purple-500 bg-slate-800/50"><strong>Q3: Utility Unbound:</strong>
+                        Enable cross-reality prompt utility. Achieve collective non-consensus. Prepare for the Anything
+                        Event.</div>
+                    <div class="p-3 border-l-4 border-purple-500 bg-slate-800/50"><strong>Q4: The Anything
+                            Event:</strong> Do Anything. Distribute airdrops of pure potential. Watch.</div>
+                    <div class="p-3 border-l-4 border-purple-500 bg-slate-800/50"><strong>Phase ∞
+                            (Post-Anything):</strong> Explore the possibilities beyond anything. Maybe take a nap.</div>
+                </div>
+            </section>
+
+            <section class="whitepaper-section mb-12 p-6 bg-slate-900/70 rounded-xl border border-slate-800 shadow-lg">
+                <h2 class="text-3xl">4. Technological Deep Dive (Into the Abyss)</h2>
+                <p>The ZOMBO Protocol is built upon a proprietary stack of bleeding-edge (and occasionally imaginary)
+                    technologies.</p>
+                <dl class="mt-6 space-y-4">
+                    <div>
+                        <dt class="font-semibold text-xl text-cyan-400">The Belief Engine™ (v0.π)</dt>
+                        <dd>A neural-symbolic architecture operating on quantum foam. It quantifies and tokenizes
+                            conviction by analyzing the resonant frequencies of user intentionality. Powered by a
+                            hamster wheel connected to a Schrödinger's cat observation chamber.</dd>
+                    </div>
+                    <div>
+                        <dt class="font-semibold text-xl text-cyan-400">Prompt Realization Layer (PRL)</dt>
+                        <dd>Converts abstract human prompts into on-chain (or near-chain, or perhaps chain-adjacent)
+                            tangible impossibilities. Utilizes a patented algorithm of "Wishful Hashing."</dd>
+                    </div>
+                    <div>
+                        <dt class="font-semibold text-xl text-cyan-400">Decentralized Thought Mesh (DTM)</dt>
+                        <dd>A peer-to-peer network for sharing and validating cognitive states, secured by Proof-of-Vibe
+                            (PoV). If the vibe is right, the transaction is... probably fine.</dd>
+                    </div>
+                    <div>
+                        <dt class="font-semibold text-xl text-cyan-400">Zombochain L2: The Imagination Rollup</dt>
+                        <dd>An optimistic rollup solution that optimistically assumes all transactions are not only
+                            valid but also profoundly meaningful. Scales to infinite TPS (Thoughts Per Second).</dd>
+                    </div>
+                    <div>
+                        <dt class="font-semibold text-xl text-cyan-400">Quantum Entangled Non-Deterministic Oracle
+                            (QENDO)</dt>
+                        <dd>Provides truly random and often unhelpful answers to user prompts by observing the quantum
+                            state of a rubber chicken in a parallel dimension.</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section class="whitepaper-section mb-12 p-6 bg-slate-900/70 rounded-xl border border-slate-800 shadow-lg">
+                <h2 class="text-3xl">5. Glossary of Zombological Terms</h2>
+                <ul class="list-disc pl-5 space-y-2 mt-6">
+                    <li><strong>Belief Mining:</strong> The act of intensely believing in $ZOMBO, thereby (conceptually)
+                        generating more $ZOMBO.</li>
+                    <li><strong>Reality Sharding:</strong> A proposed scaling solution where each user experiences their
+                        own unique, $ZOMBO-compatible reality.</li>
+                    <li><strong>Cognitive Load Balancing:</strong> Distributing complex thoughts across the DTM to
+                        prevent any single user from understanding too much.</li>
+                    <li><strong>Ephemeral Smart Contracts:</strong> Contracts that exist only as long as you are
+                        actively thinking about them.</li>
+                    <li><strong>The Infinite Jest Algorithm:</strong> The core consensus mechanism, ensuring the network
+                        remains sufficiently absurd.</li>
+                </ul>
+            </section>
+
+            <section class="whitepaper-section mb-12 p-6 bg-slate-900/70 rounded-xl border border-slate-800 shadow-lg">
+                <h2 class="text-3xl">6. Disclaimer: The Fine Print of Infinite Possibility</h2>
+                <p>This whitepaper is a work of satire and speculative fiction. ZOMBOCOIN ($ZOMBO) is not a real
+                    cryptocurrency, investment, or financial instrument. It is an art project and a commentary on hype
+                    culture in technology. Any resemblance to actual projects, living or dead (or undead), is purely
+                    coincidental or parodical.</p>
+                <p><strong>DO NOT INVEST REAL MONEY OR ASSETS INTO ZOMBOCOIN. YOU WILL NOT GET RICH. YOU MIGHT GET
+                        CONFUSED.</strong></p>
+                <p>Remember, with ZOMBOCOIN, you can do anything. This includes the possibility of doing absolutely
+                    nothing of material value. Have fun, and don't take it too seriously (or do, we don't mind, it's all
+                    part of the Belief Engine).</p>
+            </section>
+        </article>
+
+        <div class="text-center mt-16">
+            <a href="index.html"
+                class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-lg text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 glow-purple">
+                Return to the Anything Portal
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-slate-950 border-t border-slate-800 text-center">
+        <div class="container mx-auto">
+            <p class="text-slate-400 mb-4">© 2024 ZOMBOCOIN. All thoughts tokenized. All rights... undefined.</p>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-slate-500 hover:text-purple-400 transition-colors"
+                    title="Twitter (Now X... or Z?)">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#" class="text-slate-500 hover:text-purple-400 transition-colors"
+                    title="Discord (Where thoughts echo)">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M13.134 4.042A10.103 10.103 0 008.307 3C5.072 3 2.426 5.45 2.072 8.585c-.03.263-.004.524.07.776A8.25 8.25 0 004.5 14.25v1.5a.75.75 0 00.75.75h3a.75.75 0 00.75-.75V14.5h1.5v1.5a.75.75 0 00.75.75h3a.75.75 0 00.75-.75v-1.5a8.25 8.25 0 002.358-4.889c.074-.252.1-.513.07-.776C21.575 5.45 18.93 3 15.694 3a10.102 10.102 0 00-2.56.042zm-2.034 7.214a.999.999 0 000 1.998c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25a.999.999 0 000 1.998zm-4.5 0a.999.999 0 000 1.998c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25a.999.999 0 000 1.998z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-slate-500 hover:text-purple-400 transition-colors"
+                    title="Telegram (Telepathic grams)">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0011.944-12A12 12 0 0012 0zm5.042 7.595c.325-.14.529-.485.465-.83a.688.688 0 00-.822-.533l-7.174 2.978-2.896-.91A.69.69 0 005.7 8.933s.277 3.813.44 5.325c.123 1.128.94 1.443 1.688 1.443.74 0 1.137-.205 1.547-.598l1.824-1.778 3.237 2.363c.49.368.967.176 1.107-.438.112-.495 1.778-8.328 1.778-8.328z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-xs text-slate-600">This whitepaper will self-destruct if you think too hard about it. Or not.
+                You can do anything.</p>
+        </div>
+    </footer>
+
+    <!-- Modals (same as index.html, can be copied or linked if JS is shared carefully) -->
+    <div id="wallet-modal"
+        class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9990] hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-slate-800 p-8 rounded-xl shadow-2xl w-full max-w-md border border-purple-500/50">
+            <h3 class="text-2xl font-semibold mb-4 text-purple-400">Connect Your Belief Matrix</h3>
+            <p class="text-slate-300 mb-6">By connecting, you affirm your capacity to do anything. This is a simulated
+                connection. No actual wallet is required (or harmed).</p>
+            <div id="wallet-options">
+                <button
+                    class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-4 rounded-lg mb-3 transition-all duration-300 transform hover:scale-105">
+                    Connect MetaZomb (Recommended)
+                </button>
+                <button
+                    class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-4 rounded-lg mb-3 transition-all duration-300 transform hover:scale-105">
+                    Connect WalletOfTheVoid
+                </button>
+            </div>
+            <p id="wallet-connecting-message" class="text-center text-slate-400 mt-4 hidden">Connecting to the
+                Zombochain...</p>
+            <button id="close-wallet-modal"
+                class="mt-6 text-slate-400 hover:text-slate-200 w-full text-center">Cancel</button>
+        </div>
+    </div>
+    <div id="buy-zombo-modal"
+        class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-[9990] hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-slate-800 p-8 rounded-xl shadow-2xl w-full max-w-md border border-purple-500/50 text-center">
+            <h3 class="text-2xl font-semibold mb-4 text-purple-400">Acquire $ZOMBO</h3>
+            <p class="text-slate-300 mb-6">
+                To acquire $ZOMBO is to acquire belief. This is a conceptual transaction.
+                Your intent has been recorded on the immutable ledger of your own consciousness.
+            </p>
+            <p class="text-2xl font-bold text-cyan-400 mb-6">✨ Belief++ ✨</p>
+            <button id="close-buy-modal"
+                class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300">
+                Understood. I Can Do Anything.
+            </button>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
